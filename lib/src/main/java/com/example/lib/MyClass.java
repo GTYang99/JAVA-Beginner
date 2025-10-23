@@ -12,6 +12,27 @@ public class MyClass {
         MyClass.forMethod();
     }
 
+    public static void dataTypeArrayMethod() {
+        // Declare and initialize an array
+        int[] numbers = {10, 20, 30, 40, 50};
+        // Or new way to declare and initialize an array
+        int[] numbersArray = new int[5];
+        // Store values in the array
+        numbersArray[0] = 10;
+        numbersArray[1] = 20;
+        numbersArray[2] = 30;
+        numbersArray[3] = 40;
+        numbersArray[4] = 50;
+
+        
+
+        // Access and print array elements using a for loop
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+    }
+
+
     public static void forMethod() {
         // for( initialization; condition; increment ) { }
         for (int i = 1; i <= 5; i++) {
