@@ -9,7 +9,45 @@ public class MyClass {
 //        new MyClass().string();
 //        MyClass.staticMethod();
 //        MyClass.whileMethod();
-        MyClass.forMethod();
+//        MyClass.forMethod();
+//        MyClass.dataTypeArrayMethod();
+//        MyClass.twoDimensionalArrayMethod();
+        MyClass.threeDimensionalArrayMethod();
+    }
+
+    public static void twoDimensionalArrayMethod() {
+        // Declare and initialize a 2D array
+        // dataType [][] arrayName = { {row1}, {row2}, ... , {rowN} };
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        // Access and print elements of the 2D array using nested for loops
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println(); // New line after each row
+        }
+    }
+
+    public static void threeDimensionalArrayMethod() {
+        int[][][] threeDimensionalArray = new int[1][22][33];
+        threeDimensionalArray[0][1] = new int[99];
+        threeDimensionalArray[0][1][1] = 100;
+
+
+        for (int i = 0; i < threeDimensionalArray.length; i++) {
+            for (int j = 0; j < threeDimensionalArray[i].length; j++) {
+                for (int k = 0; k < threeDimensionalArray[i][j].length; k++) {
+                    System.out.print(threeDimensionalArray[i][j][k] + " ");
+                }
+                System.out.println(); // New line after each 2D slice
+            }
+            System.out.println(); // New line after each 3D slice
+        }
     }
 
     public static void dataTypeArrayMethod() {
@@ -29,6 +67,11 @@ public class MyClass {
         // Access and print array elements using a for loop
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+
+        // for each loop to access array elements
+        for (int num : numbers) {
+            System.out.println("Array element: " + num);
         }
     }
 
