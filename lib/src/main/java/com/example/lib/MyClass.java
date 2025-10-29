@@ -1,4 +1,6 @@
 package com.example.lib;
+import Inheritance.Car;
+import Inheritance.Vehicle;
 
 public class MyClass {
     public static void main(String[] args){
@@ -12,7 +14,18 @@ public class MyClass {
 //        MyClass.forMethod();
 //        MyClass.dataTypeArrayMethod();
 //        MyClass.twoDimensionalArrayMethod();
-        MyClass.threeDimensionalArrayMethod();
+//        MyClass.threeDimensionalArrayMethod();
+
+        // Inheritance and Polymorphism
+        Car myCar = new Car(4, "Toyota");
+        myCar.start(); // Inherited method from Vehicle class
+        myCar.beep();  // Method from Car class
+
+        // Polymorphism: Vehicle reference but Car object
+        Vehicle myCar2 = new Vehicle(4);
+        Vehicle myTrunk = new Vehicle(6);
+        myCar2.start();
+        myTrunk.start();
     }
 
     public static void twoDimensionalArrayMethod() {

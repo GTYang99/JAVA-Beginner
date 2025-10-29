@@ -1,6 +1,6 @@
 package com.example.lib;
 
-public class Car {
+public class MyCar {
     // Attributes - properties of an object
     //            - private, public, protected
     // private: accessible only within the class
@@ -17,7 +17,7 @@ public class Car {
     Double speed = 0.0;
     Double maxSpeed = 160.0;
 
-    public Car(String color, String bands, Double maxSpeed) {
+    public MyCar(String color, String bands, Double maxSpeed) {
         this.color = color;
         this.bands = bands;
         this.maxSpeed = maxSpeed;

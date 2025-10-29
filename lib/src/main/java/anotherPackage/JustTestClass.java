@@ -1,13 +1,13 @@
 package anotherPackage;
-import com.example.lib.Car;
+import com.example.lib.MyCar;
 
 public class JustTestClass {
     void tester() {
-        Car newCar = new Car("Blue", "Honda", 180.0);
+        MyCar newCar = new MyCar("Blue", "Honda", 180.0);
         // The class private field 'engine' is not accessible here.
-        newCar.engine = "V6";
+//        newCar.engine = "V6";
         // also protected field 'color' is not accessible here.
-        newCar.driver = "Alice";
+//        newCar.driver = "Alice";
     }
 
 }
