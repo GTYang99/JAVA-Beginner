@@ -29,6 +29,11 @@ public class Car extends Vehicle {
     }
 
     @Override
+    void loadingQuantity() {
+        System.out.println("Loading quantity:4 people");
+    }
+
+    @Override
     public void start() {
         super.start();
         honk();

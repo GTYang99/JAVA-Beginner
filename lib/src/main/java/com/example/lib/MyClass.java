@@ -16,14 +16,25 @@ public class MyClass {
 //        MyClass.twoDimensionalArrayMethod();
 //        MyClass.threeDimensionalArrayMethod();
 
-        // Inheritance and Polymorphism
+        // 1）Inheritance and Polymorphism
         Car myCar = new Car(4, "Toyota");
         myCar.start(); // Inherited method from Vehicle class
         myCar.beep();  // Method from Car class
 
-        // Polymorphism: Vehicle reference but Car object
-        Vehicle myCar2 = new Vehicle(4);
-        Vehicle myTrunk = new Vehicle(6);
+        // 2）Polymorphism: Vehicle reference but Car object
+        Vehicle myCar2 = new Vehicle(4) {
+            // 3）Abstraction: Override the abstract method
+            @Override
+            public void loadingQuantity() {
+                System.out.println("Loading quantity:4 people");
+            }
+        };
+        Vehicle myTrunk = new Vehicle(6) {
+            @Override
+            public void loadingQuantity() {
+                System.out.println("Loading quantity:2 people");
+            }
+        };
         myCar2.start();
         myTrunk.start();
     }

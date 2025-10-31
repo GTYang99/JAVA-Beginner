@@ -1,12 +1,22 @@
 package Inheritance;
 
-public class Vehicle {
+public abstract class Vehicle {
     int numberOfWheels; // default access
     boolean isStarted; // default access
 
+    // Constructor
     public Vehicle(int wheels) {
         this.numberOfWheels = wheels;
     }
+
+    // 3-1 ）Abstraction - abstract method
+    //             - abstract class
+    /**
+    abstract class SuperCar extends Vehicle {
+        // 不實作 loadingQuantity() 也可以，因為 SuperCar 也是抽象類別
+    }
+     */
+    abstract void loadingQuantity();
 
     public void start() {
         isStarted = true;
