@@ -16,7 +16,7 @@ public abstract class Vehicle {
         // 不實作 loadingQuantity() 也可以，因為 SuperCar 也是抽象類別
     }
      */
-    abstract void loadingQuantity();
+    public abstract void loadingQuantity();
 
     public void start() {
         isStarted = true;

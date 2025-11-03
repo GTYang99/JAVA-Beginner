@@ -29,7 +29,7 @@ public class Car extends Vehicle {
     }
 
     @Override
-    void loadingQuantity() {
+    public void loadingQuantity() {
         System.out.println("Loading quantity:4 people");
     }
 

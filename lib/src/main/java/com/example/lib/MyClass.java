@@ -1,6 +1,8 @@
 package com.example.lib;
 import Inheritance.Car;
+import Inheritance.Trunk;
 import Inheritance.Vehicle;
+import Inheritance.VehicleInterface;
 
 public class MyClass {
     public static void main(String[] args){
@@ -15,7 +17,7 @@ public class MyClass {
 //        MyClass.dataTypeArrayMethod();
 //        MyClass.twoDimensionalArrayMethod();
 //        MyClass.threeDimensionalArrayMethod();
-
+/*
         // 1）Inheritance and Polymorphism
         Car myCar = new Car(4, "Toyota");
         myCar.start(); // Inherited method from Vehicle class
@@ -23,20 +25,27 @@ public class MyClass {
 
         // 2）Polymorphism: Vehicle reference but Car object
         Vehicle myCar2 = new Vehicle(4) {
-            // 3）Abstraction: Override the abstract method
-            @Override
+            // 3-1）Abstraction: Override the abstract method
             public void loadingQuantity() {
                 System.out.println("Loading quantity:4 people");
             }
         };
         Vehicle myTrunk = new Vehicle(6) {
-            @Override
             public void loadingQuantity() {
                 System.out.println("Loading quantity:2 people");
             }
         };
         myCar2.start();
         myTrunk.start();
+*/
+        // 3-2） Interface: Implement the interface
+        Trunk myTrun2 = new Trunk(4);
+        Trunk myTrun3 = new Trunk(6);
+
+        myTrun2.startEngine();
+        myTrun2.accelerate();
+        myTrun3.stopEngine();
+
     }
 
     public static void twoDimensionalArrayMethod() {
